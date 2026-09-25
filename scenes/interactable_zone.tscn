@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dxkijm6uuutqk"]
+
+[ext_resource type="Script" uid="uid://dsilpa4fhmqru" path="res://scenes/interactable_zone.gd" id="1_jpo25"]
+
+[node name="InteractableZone" type="Node2D" unique_id=1659842502]
+script = ExtResource("1_jpo25")
