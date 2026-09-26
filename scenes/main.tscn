@@ -2,16 +2,29 @@
 
 [ext_resource type="Script" uid="uid://dsyvgpderufbi" path="res://scenes/main.gd" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://dxkijm6uuutqk" path="res://scenes/interactable_zone.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://bmbit6lldrhwu" path="res://scenes/player.tscn" id="3_sugp2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1vivr"]
 radius = 45.276924
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1vivr"]
+size = Vector2(1275, 43)
 
 [node name="Main" type="Node2D" unique_id=1685321197]
 script = ExtResource("1_0wfyh")
 
 [node name="InteractableZone" parent="." unique_id=1659842502 instance=ExtResource("1_o5qli")]
+position = Vector2(712, 554)
 
 [node name="Area2D" type="Area2D" parent="InteractableZone" unique_id=408502972]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableZone/Area2D" unique_id=601210712]
 shape = SubResource("CircleShape2D_1vivr")
+
+[node name="Player" parent="." unique_id=898339257 instance=ExtResource("3_sugp2")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=859846349]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1491279855]
+position = Vector2(576, 638)
+shape = SubResource("RectangleShape2D_1vivr")
